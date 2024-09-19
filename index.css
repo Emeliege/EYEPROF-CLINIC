@@ -495,6 +495,12 @@ footer .social-media a {
         font-size: 12px;
     }
 
+    .info {
+        margin-right: 280px;
+        margin-top: 1px;
+        font-size: 13px;
+    }
+
     .overlay-text {
         top: 20%;
         font-size: 50px;
