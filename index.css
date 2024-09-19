@@ -495,11 +495,6 @@ footer .social-media a {
         font-size: 12px;
     }
 
-    .info {
-        margin-right: 280px;
-        margin-top: 1px;
-        font-size: 13px;
-    }
 
     .overlay-text {
         top: 20%;
@@ -551,7 +546,7 @@ footer .social-media a {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
     header h1 {
         margin-top: 5px;
         font-size: 19px;
@@ -559,7 +554,7 @@ footer .social-media a {
      
      .info {
          margin-right: 280px;
-         margin-top: 1px;
+         margin-top: -900px;
          font-size: 13px;
      }
 
