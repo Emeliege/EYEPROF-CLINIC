@@ -9,25 +9,26 @@ body {
     line-height: 1.6;
     color: #333;
     font-size: 100%;
+    max-width: auto;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
+    width: auto;
+    width: auto;
     overflow: hidden;
 }
 
 header {
-    background-color: #9BA49E;
+    background-color: #f3f3f3;
     color: #fff;
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
 header .container {
-    width: 1350px;
+    width: auto;
 }
 
 header img {
@@ -90,11 +91,11 @@ header .contact-button a {
     text-decoration: none;
     border-radius: 5px;
     float: right;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 header .contact-button a:hover {
-    background-color: red;
+    background-color: blue;
 }
 
 .overlay-text {
@@ -104,7 +105,7 @@ header .contact-button a:hover {
     transform: translate(-50%, 20%);
     color: black;
     padding: 1px 2px;
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     font-weight: 800;
     font-family: serif;
@@ -112,30 +113,29 @@ header .contact-button a:hover {
 
 .text-button {
     position: absolute;
-    top: 110%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 390%);
+    transform: translate(-50%, 50%);
     color: #fff;
     font-size: 30px;
-    text-align: center;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
     background: #f4b400;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 .text-button:hover {
-    background-color: red;
+    background-color: blue;
 }
-
 #slider {
     overflow: hidden;
+    position: relative;
 }
 
 #slider figure {
-    position: relative;
     width: 400%;
     margin: 0%;
     left: 0%;
@@ -170,7 +170,11 @@ header .contact-button a:hover {
 
 .services {
     background: #f9f9f9;
-    padding: 50px 0;
+    padding: 40px 0;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
 }
 
 .services h2 {
@@ -185,9 +189,9 @@ header .contact-button a:hover {
 
 .card {
     background: #fff;
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 80%;
     text-align: center;
 }
@@ -197,7 +201,7 @@ header .contact-button a:hover {
 }
 
 .card-heading {
-    font-weight: 1000;
+    font-weight: 900;
     color: #615e5e;
 }
 
@@ -223,9 +227,11 @@ header .contact-button a:hover {
 
 .container2 {
     display: flex;
+    margin: auto;
 }
 
 .boxed {
+    max-width: 40rem;
     margin-top: 20px;
     margin-bottom: 100px;
     padding: 10px;
@@ -240,24 +246,17 @@ header .contact-button a:hover {
     word-spacing: 2px;
 }
 
-.boxed-head {
-    position: absolute;
-    right: 290px;
-    margin-top: -30px;
-    background-color: #615e5e;
-    color: #f9f9f9;
-    border-radius: 10px;
-    padding: 5px;
-}
-
 .image1 {
-    margin-top: -50px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 
 .image1 img {
     max-width: 100%;
     border-radius: 50px;
+    width: 700px;
+    height: 700px;
+    
 }
 
 .about-us {
@@ -359,39 +358,55 @@ footer .social-media a {
 
 
 /**Styling for mobile devices**/
-@media (max-width: 1558px) {
+@media (max-width: 1640px) {
+    header nav ul li {
+        display: inline;
+        margin: 0 65px;
+    }
+    
+    header .contact-button {
+        float: right;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
     .overlay-text {
-        top: 50%;
+        top: 30%;
     }
     
     .text-button {
-        top: 70%;
+        top: 65%;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
  
     header img {
-        margin-left: 30px;
+        margin-left: 15px;
     }
     
     header h1 {
        margin-top: 20px;
-    }
-    
-    .info {
-        margin-right: 40px;
-        margin-top: 10px;
+       font-size: 30px;
     }
 
     header nav ul li {
         display: inline;
         margin: 0 40px;
     }
-   
+
+    header .contact-button {
+        float: right;
+        margin-top: 40px;
+        font-size: small;
+        margin-right: 5px;
+    }
+    
+    .info {
+        margin-right: 10px;
+    }
+
     header .contact-button a {
-        margin-right: 150px;
-        margin-top: 10px;
+        margin-right: px;
     }
     
     .overlay-text {
@@ -400,56 +415,57 @@ footer .social-media a {
     }
 
     .text-button {
-        top: 30%;
+        top: 50%;
     }
     
     .card {
         padding: 20px;
         width: 20%;
     }
-   
-    .boxed-head {
-        right: 180px;
-    }
 
     .boxed {
         position: relative;
         display: inline-block;
-        margin-left: -90px;
+        margin-right: 50px;
         margin-top: 40px;
+        font-size: small;
     }
 
     .image1 img {
-        max-width: 80%;
+        /* max-width: aut; */
         border-radius: 50px;
-        margin-left: -100px;
+        margin-left: -10px;
+        width: 500px;
+        height: 500px;
     }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 834px) {
 
  header img {
         margin-left: 0px;
         margin-top: 5px;
-    }
-    
+    } 
     header h1 {
-       margin-top: 5px;
-       font-size: 20px;
+        margin-top: 20px;
+        font-size: 25px;
+     }
+  
+    header .contact-button {
+        float: right;
+        margin-top: 40px;
+        font-size: small;
+        margin-right: 5px;
     }
     
     .info {
-        margin-right: 230px;
-        margin-top: 1px;
+        
+        margin-right: 10px;
     }
 
     header nav ul li {
         display: inline;
         margin: 0 20px;
-    }
-   
-    header .contact-button a {
-        margin-right: 590px;
     }
 
     .overlay-text {
@@ -458,7 +474,7 @@ footer .social-media a {
     }
 
     .text-button {
-        top: 40%;
+        top: 70%;
     }
     
     .card {
@@ -468,27 +484,40 @@ footer .social-media a {
     .card-heading {
         font-size: 14px;
     }
-   
-    .boxed-head {
-        right: 140px;
-        margin-top: -45px;
-    }
 
     .boxed {
         position: relative;
         display: inline-block;
-        margin-left: -160px;
         margin-top: -7px;
     }
 
     .image1 img {
-        max-width: 80%;
         border-radius: 50px;
-        margin-left: -200px;
+        width: 400px;
+        height: 500px;
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
+    header img {
+           margin-left: 0px;
+           margin-top: 5px;
+       } 
+       header h1 {
+           margin-top: 20px;
+           font-size: 20px;
+        }
+     
+       header .contact-button {
+           float: right;
+           margin-top: 5px;
+           font-size: 12px;
+           margin-right: 5px;
+       }
+       
+       .info {
+           margin-right: 10px;
+       }
     header nav ul li {
         display: inline;
         margin: 0 5px;
@@ -502,8 +531,9 @@ footer .social-media a {
     }
 
     .text-button {
-        top: 30%;
+        top: 70%;
        padding: 5px;
+       font-size: 18px;
     }
 
     .service-cards {
@@ -513,31 +543,25 @@ footer .social-media a {
     
     .card {
         padding: 50px;
-        width: 360px;
+        width: auto;
         font-size: 15px;
     }
 
     .card-heading {
         font-size: 14px;
     }
-   
-    .boxed-head {
-        right: 140px;
-        margin-top: -25px;
-        padding: 10px;
-    }
 
     .boxed {
         position: relative;
         display: inline-block;
-        margin-left: -290px;
-        margin-top: 40px;
+        margin-top: 10px;
+        font-size: small;
+        color: black;
+        margin: auto;
     }
 
     .image1 img {
-        max-width: 10%;
-        border-radius: 50px;
-        margin-left: -400px;
+        margin-left: -900px;
     }
 
     .testimonial-slider {
@@ -546,18 +570,26 @@ footer .social-media a {
     }
 }
 
-@media (max-width: 380px) {
-    header h1 {
+@media (max-width: 480px) {
+    header img {
+        margin-left: -10px;
         margin-top: 5px;
-        font-size: 19px;
+    } 
+    header h1 {
+        margin-top: 20px;
+        font-size: 20px;
      }
-     
-     .info {
-         margin-right: 280px;
-         margin-top: -900px;
-         font-size: 13px;
-     }
-
+  
+    header .contact-button {
+        float: right;
+        margin-top: 5px;
+        font-size: 8px;
+        margin-right: 1px;
+    }
+    
+    .info {
+        margin-right: 1px;
+    }
     header nav ul li {
         display: inline;
         margin: 4px;
@@ -565,12 +597,12 @@ footer .social-media a {
     }
 
     .overlay-text {
-        top: 40%;
+        top: 20%;
         font-size: 50px;
     }
 
     .text-button {
-        top: 40%;
+        top: 70%;
        padding: 4px;
     }
 
@@ -581,36 +613,31 @@ footer .social-media a {
     
     .card {
         padding: 20px;
-        width: 300px;
+        width: auto;
     }
 
     .card-heading {
         font-size: 14px;
     }
    
-    .boxed-head {
-        right: 120px;
-        margin-top: -25px;
-        padding: 10px;
-    }
-
     .boxed {
         position: relative;
         display: inline-block;
-        margin-left: -290px;
-        margin-top: 40px;
+        margin-top: 10px;
+        font-size: small;
+        color: black;
+        margin: auto;
     }
 
     .image1 img {
-        max-width: 10%;
-        border-radius: 50px;
-        margin-left: -400px;
+        margin-left: -900px;
     }
+
 
     .testimonial-slider {
         display: flex;
         flex-direction: column;
-        width: 320px;
+        width: auto;
         padding: 20px;
     }
 
